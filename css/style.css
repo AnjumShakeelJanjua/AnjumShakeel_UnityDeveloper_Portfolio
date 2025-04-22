@@ -1,87 +1,19 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Add these new styles to your existing CSS file */
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-    position: relative;
-}
-
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    margin-bottom: 20px;
-}
-
-.header-contact {
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-.header-contact i {
-    margin-right: 8px;
-    color: #3498db;
-}
-
-nav {
-    background: #34495e;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover, nav ul li a.active {
-    background: #2c3e50;
-    color: #3498db;
-}
-
-.intro {
-    text-align: center;
-    padding: 40px 0;
-    background: white;
-    margin: 20px 0;
+/* Resume Download Button in Nav */
+.resume-download {
+    background: #3498db;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 8px 10px;
+    padding: 7px 15px;
 }
 
-.skills-section {
+.resume-download:hover {
+    background: #2980b9;
+}
+
+/* Soft Skills Section */
+.soft-skills {
     margin: 40px 0;
     background: white;
     padding: 30px;
@@ -89,34 +21,29 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.skills-grid {
+.soft-skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-.skill-category {
+.soft-skill-category, .language-category {
     background: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
-    border-left: 4px solid #3498db;
 }
 
-.skill-category h3 {
-    color: #2c3e50;
-    margin-bottom: 15px;
+.soft-skill-category {
+    border-left: 4px solid #e74c3c;
 }
 
-.skill-category ul {
-    list-style-position: inside;
+.language-category {
+    border-left: 4px solid #2ecc71;
 }
 
-.skill-category li {
-    margin-bottom: 8px;
-}
-
-.featured-projects {
+/* Education & Certifications Section */
+.education-certifications {
     margin: 40px 0;
     background: white;
     padding: 30px;
@@ -124,124 +51,63 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.experience-timeline {
-    position: relative;
-    padding-left: 30px;
-    margin-top: 30px;
-}
-
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    left: 7px;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: #3498db;
-}
-
-.experience-item {
-    position: relative;
-    margin-bottom: 30px;
-    padding-left: 30px;
-}
-
-.experience-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #3498db;
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px #3498db;
-}
-
-.experience-item h3 {
-    color: #2c3e50;
-    margin-bottom: 5px;
-}
-
-.experience-date {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    font-weight: normal;
-}
-
-.experience-item h4 {
-    color: #3498db;
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-.experience-item ul {
-    margin-left: 20px;
-    color: #555;
-}
-
-.certifications {
-    margin: 40px 0;
-    background: white;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.certs-grid {
+.edu-cert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-.cert-item {
+.education-item {
     background: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    border-left: 4px solid #9b59b6;
 }
 
-.cert-item i {
+.education-item i {
     font-size: 2rem;
-    color: #3498db;
+    color: #9b59b6;
     margin-bottom: 15px;
 }
 
-.cert-item h3 {
+.education-item h3 {
     color: #2c3e50;
     font-size: 1.1rem;
     margin-bottom: 5px;
 }
 
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+.education-item p {
+    color: #555;
+    margin-bottom: 5px;
 }
 
-.social-links a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+.education-item .date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
 }
 
-.social-links a:hover {
-    color: #3498db;
+/* Experience Section Enhancements */
+.experience-section {
+    margin: 40px 0;
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+    .soft-skills-grid, .edu-cert-grid {
+        grid-template-columns: 1fr;
     }
     
-    .skills-grid, .certs-grid {
-        grid-template-columns: 1fr;
+    .experience-item {
+        padding-left: 20px;
+    }
+    
+    .experience-timeline::before {
+        left: 5px;
     }
 }
